@@ -1,6 +1,6 @@
 # Egyszerű NodeJS fájlkereső weblap
 
-* Mappán belüli fájlnevekben szereplő szöveg keresése
+* Mappán belüli fájlok keresése fájlnév alapján
 * Almappák kiválaszthatók a gyorsabb keresés érdekében
 * Változtatások listája
 * Material design
