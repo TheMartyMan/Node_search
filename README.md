@@ -4,4 +4,5 @@
 * Almappák kiválaszthatók a gyorsabb keresés érdekében
 * Változtatások listája
 * Material design
+* Értesítési rendszer
 * Világos/sötét mód
