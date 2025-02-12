@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 
 <head>
-    <title>Kereső</title>
-    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta charset="utf-8">
+    <title>Kereső - Mappaválasztás</title>
+    <link rel="icon" type="image/x-icon" href="assets/index.ico">
     <link rel="stylesheet" href="CSS/indexStyle.css">
-    <script src="Scripts/indexScripts.js" defer></script>
+    <script src="Scripts/indexScript.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="fade-in">
-    <h1>Fájlkereső</h1>
+<body>
+    <h1>Keresők</h1>
     <h2>Mappa választás</h2>
-
-    <button id="setAllBtn">Teljes jegyzék keresése (lassú)</button>
+    <div class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <label for="themeToggle" class="icon-toggle" title="Váltás a világos és sötét megjelenés között">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </label>
+      </div>
+    <div id="notification" class="notification"></div>
+    <button id="setAllBtn" title="Keresés a teljes jegyzékben" type="button">Teljes jegyzék keresése</button>
 
     <br>Almappák</br>
-    <div id="folderList"></div>
+    <div id="folderList" title="Keresés a kiválasztott mappában"></div>
     <br><br>
+    <ul>
+        <li id="changelog-trigger" title="Kattints a változtatások megtekintéséhez">v6.7.1</li>
+    </ul>
+
+    <!-- Changelog üzenetdoboz -->
+    <div id="changelog" class="changelog">
+        <div class="changelog-content">
+            <h2 class="cl">Változtatások listája</h2>
+            <p class="cl">Az előzőleg kiadott verzió (6.7) óta az alábbi változások történtek</p>
+
+
+            <h3 class="cl">Hibajavítások</h3>
+            <ul>
+                <li class="cl">Az oldalak ikonjai nem jelentek meg, ez a hiba javítva lett.</li>
+                <li class="cl">A "Vissza a tetejére" gomb nem megfelelően alkalmazkodott a sötét módhoz, ez a hiba javítva lett.</li>
+                <li class="cl">Fájl megnyitás során kontextus ellenőrzési hibák javítva lettek.</li>
+                <li class="cl">A nyitóoldalon és a változási lista gombtípusainak hiánya javítva lett.</li>
+            </ul>
+
+            <h3 class="cl">Új funkciók</h3>
+                <ul>
+                    <li class="cl">Az oldalak új ikont kaptak.</li>
+                    <li class="cl">A "hiba történt" oldal újra lett tervezve.</li>
+                </ul>
+
+	        <h3 class="cl">Egyéb változtatások</h3>
+                <ul>
+                    <li class="cl">Egy felesleges animáció el lett távolítva, így a weboldalak válaszideje jobb lett.</li>
+                    <li class="cl">Node környezet frissítve.</li>
+		            <li class="mg">- mgaramszegi</li>
+		        </ul>
+
+            <button id="changelog-close" title="Változtatások listájának bezárása" type="button">Bezárás</button>
+        </div>
+    </div>
 </body>
 
 </html>

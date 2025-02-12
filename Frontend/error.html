@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <title>HIBA: A mappa nem elérhető</title>
+  <link rel="icon" type="image/x-icon" href="assets/error.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes pulse {
+  0% {
+    outline-width: 1px;
+    outline-offset: 0;
+    outline-color: rgba(0, 0, 0, 0);
+  }
+
+  10% {
+    outline-color: rgba(255, 0, 0, 0.75);
+  }
+
+  50% {
+    outline-width: 7px;
+    outline-offset: 4px;
+    outline-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    outline-width: 7px;
+    outline-offset: 4px;
+    outline-color: rgba(0, 0, 0, 0);
+  }
+}
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      padding: 20px;
+      background-color: #ffffff;
+      outline-width: 1px;
+      outline-offset: 0;
+      outline-color: #ff0000;
+      outline-style: solid;
+      animation: pulse 2s ease infinite;
+      border-radius: 8px;
+      max-width: 80%;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #ff0000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="assets/connection_error.png">
+
+  <div class="container">
+    <h1>A mappa nem elérhető.</h1>
+  </div>
+  <div class="container">
+    <h1>Ellenőrizd a hálózati kapcsolatot, aztán próbáld újra.</h1>
+  </div>
+</body>
+
+</html>

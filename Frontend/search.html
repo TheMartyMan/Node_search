@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="hu">
 <head>
-    <title>Kereső</title>
-    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta charset="utf-8">
+    <title id="title"></title>
+    <link rel="icon" type="image/x-icon" href="assets/search.ico">
     <link rel="stylesheet" href="CSS/searchStyle.css">
-    <script src="Scripts/searchScripts.js" defer></script>
+    <script src="Scripts/searchScript.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="fade-in">
-    <h1>Kereső</h1>
-    <p id="currentFolder">Jelenlegi mappa: </p>
+<body>
+    <h2>Kereső</h2>
+    <p id="currentFolder"></p>
+
+    <div id="notification" class="notification"></div>
+
     <br></br>
+    <div class="search-message-container">
+        <div id="searchMessage" class="search-message">Keresés folyamatban, kérlek várj...</div>
+    </div>
     <input type="text" id="searchQuery" placeholder="Keresett szöveg...">
-    <button id="searchFilesBtn" class="searchBtn">Fájlon belüli keresés</button>
-    <button id="searchFileNamesBtn" class="searchBtn">Fájlnév keresés</button>
+    
+    <button id="searchBtn" title="Keresés indítása a kiválasztott mappában" class="searchBtn" type="submit">Keresés</button>
+    <div class="cancel-search-container">
+        <button class="cancel-search-btn" id="cancelSearchBtn" title="Keresés megszakítása" type="reset">Keresés megszakítása</button>
+    </div>
+    
+    
     <ul id="results"></ul>
     <ul id="fileList"></ul>
+    <button id="topButton" title="Vissza a tetejére" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"></path>
+        </svg>
+    </button>
+
 </body>
 
 </html>
